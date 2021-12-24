@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png" min-width="400px" max-width="400px" width="400px" align="right" alt="Computador iuriCode">
+<img src="gif v1.gif" min-width="400px" max-width="400px" width="400px" align="right" alt="Computador iuriCode">
 <p>
   <H1><b> Victor Sérgio Silva Barros </b> </H1>
 </p> 
@@ -7,7 +7,7 @@
   Tenho mais de <b>29 anos de experiência na área de Tecnologia da Informação </b>, sempre atuando com foco
 na excelência na execução das atividades.<br>
 Possuo ampla vivência como <b>analista programador e consultor de sistemas de informação</b>, atuando em
-desenvolvimentos.<br>
+desenvolvimento e treinamento.<br>
 Também tenho experiência como professor universitário e de curso técnico de linguagens de
 programação, engenharia e arquitetura de software.<br>
 Sou proativo, tenho facilidade de comunicação e bom relacionamento interpessoal, além de ótimo
@@ -29,7 +29,7 @@ desempenho em equipes.<br>
 
 <p align="left">
   <a href="#" alt="Gmail">
-  <img src="https://img.shields.io/badge/-Gmail-FF0000?style=flat-square&labelColor=FF0000&logo=gmail&logoColor=white&link=vicssb@gmail.com" /></a>
+  <img src="https://img.shields.io/badge/-Gmail-FF0000?style=flat-square&labelColor=FF0000&logo=gmail&logoColor=white&link=mailto:vicssb@gmail.com" /></a>
 
   <a href="#" alt="Linkedin">
   <img src="https://img.shields.io/badge/-Linkedin-0e76a8?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/victor-sergio-silva-barros/" /></a>
