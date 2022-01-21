@@ -1,0 +1,108 @@
+package br.com.dio;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public abstract class Conta implements IConta {
+
+	private static int SEQUENCIAL = 1;
+
+	protected static final int AGENCIA_PADRAO = 1;
+	
+	protected int agencia;
+	protected int numero;
+	protected double saldo;
+	protected Cliente cliente;
+	protected List<Operacao> extrato;
+
+	public Conta(Cliente cliente) {
+		this.agencia = AGENCIA_PADRAO;
+		this.cliente = cliente;
+		this.numero = SEQUENCIAL++;
+		this.extrato = new ArrayList<Operacao>();
+	}
+
+	
+	@Override
+	public void sacar(double valor, boolean trasf) {
+		saldo -= valor;
+		Operacao operacao = new Operacao();
+		
+		
+		//System.out.println("New - Operacao ="+operacao.getTipo());
+		
+		if (trasf) {
+			operacao.setTipo("Transferencia");
+			//System.out.println("If - Operacao ="+operacao.getTipo());
+		}else {
+			System.out.println("O saque de "+valor+" foi reslizado na conta numero "+
+					numero+" do cliente "+this.cliente.getNome());
+			operacao.setTipo("Saque");
+			//System.out.println("Else - Operacao ="+operacao.getTipo());
+		}
+		operacao.setValor(valor);
+		extrato.add(operacao);
+	}
+
+	@Override
+	public void depositar(double valor, boolean trasf) {
+		saldo += valor;
+		Operacao operacao = new Operacao();
+
+		if (trasf) {
+			operacao.setTipo("Transferencia");
+		}else {
+			System.out.println("O deposito de "+valor+" foi reslizado na conta numero "+numero+
+					" do cliente "+this.cliente.getNome());
+			operacao.setTipo("Deposito");
+		}
+		operacao.setValor(valor);
+		extrato.add(operacao);
+	}
+
+	
+
+	@Override
+	public void transferir(double valor, Conta contaDestino) {
+		this.sacar(valor, true);
+		contaDestino.depositar(valor, true);
+		System.out.println("A transferencia de "+valor+" da conta numero "+numero+
+				" para a conta "+ contaDestino.numero+" foi reslizada.");
+
+	}
+
+	public int getAgencia() {
+		return agencia;
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	protected void imprimirInfosComuns() {
+		System.out.println("Cliente: "+ this.cliente.getNome());
+		System.out.println("Agencia: "+ this.agencia);
+		System.out.println("Numero: "+ this.numero);
+		
+	}
+	
+	protected void extrato() {
+		for (Iterator iterator = extrato.iterator(); iterator.hasNext();) {
+			Operacao operacao = (Operacao) iterator.next();
+			DateFormat dateFormat = new SimpleDateFormat("* dd-MM-yyyy hh:mm:ss");  
+			System.out.println(dateFormat.format(operacao.getData())+" - "+
+							operacao.getTipo()+" - "+operacao.getValor());
+			
+		}
+		
+	}
+
+	
+}

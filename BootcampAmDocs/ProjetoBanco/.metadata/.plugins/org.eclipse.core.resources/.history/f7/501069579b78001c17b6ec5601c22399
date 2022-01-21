@@ -1,0 +1,24 @@
+package br.com.dio;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Cliente vic = new Cliente("Victor");
+		Conta cc = new	ContaCorrente(vic);
+		Conta cp = new ContaPoupanca(vic);
+		Conta cc2 = new	ContaCorrente(vic);
+		
+		cc.depositar(100);
+		cc.imprimirExtrato();
+		cc.transferir(30, cp);
+		cc.transferir(40, cc2);	
+		cc.imprimirExtrato();
+		cp.imprimirExtrato();
+		cc2.imprimirExtrato();
+
+		
+		System.out.println("Fim.");
+	}
+
+}

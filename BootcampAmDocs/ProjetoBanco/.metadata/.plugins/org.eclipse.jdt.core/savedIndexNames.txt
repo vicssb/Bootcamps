@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+F:\JAVA\BootcampDio\ProjetoBanco\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3865310033.index
+1894252123.index

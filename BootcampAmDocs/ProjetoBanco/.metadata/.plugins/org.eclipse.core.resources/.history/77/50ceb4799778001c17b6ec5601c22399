@@ -1,0 +1,18 @@
+package br.com.dio;
+
+public class ContaPoupanca extends Conta{
+
+	private static int SEQUENCIAL = 1;
+
+	public ContaPoupanca(Cliente cliente) {
+		super.cliente = cliente;
+		super.numero = SEQUENCIAL++;
+	}
+
+	@Override
+	public void imprimirExtrato() {
+		System.out.println("=== Extrato da Conta Poupanca ===");
+		super.imprimirInfosComuns();		
+	}
+	
+}

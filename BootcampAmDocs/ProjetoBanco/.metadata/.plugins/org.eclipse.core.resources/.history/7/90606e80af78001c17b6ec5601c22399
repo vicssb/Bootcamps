@@ -1,0 +1,22 @@
+package br.com.dio;
+
+public class ContaCorrente extends Conta {
+
+
+	public ContaCorrente(Cliente cliente) {
+		super(cliente);
+	}
+
+	@Override
+	public void imprimirSaldo() {
+		System.out.println("\n=== Saldo da Conta Corrente ===");
+		super.imprimirInfosComuns();
+	}
+	
+	@Override
+	public void depositar(double valor, boolean trasf) {
+		super.depositar(valor, trasf);
+	}
+	
+
+}

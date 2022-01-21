@@ -1,0 +1,35 @@
+package br.com.dio;
+
+public class Operacao {
+	
+	String tipo;
+	double valor;
+	
+	
+	public Operacao() {
+		
+	}
+
+	public Operacao(String tipoString, double valor) {
+		this.tipo = tipoString;
+		this.valor = valor;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipoString) {
+		this.tipo = tipoString;
+	}
+
+	public double getValor() {
+		return valor;
+	}
+
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
+	
+	
+}

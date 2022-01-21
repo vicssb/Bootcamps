@@ -1,0 +1,12 @@
+package br.com.dio;
+
+public class Cliente {
+	
+	String nome;
+
+	public Cliente(String nome) {
+		this.nome = nome;
+	}
+	
+
+}

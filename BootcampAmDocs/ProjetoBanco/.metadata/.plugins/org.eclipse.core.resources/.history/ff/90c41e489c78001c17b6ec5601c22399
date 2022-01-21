@@ -1,0 +1,19 @@
+package br.com.dio;
+
+public class ContaCorrente extends Conta {
+
+	private static int SEQUENCIAL = 1;
+
+	public ContaCorrente(Cliente cliente) {
+		super(cliente);
+		this.numero = SEQUENCIAL++;
+	}
+
+	@Override
+	public void imprimirExtrato() {
+		System.out.println("=== Extrato da Conta Corrente ===");
+		super.imprimirInfosComuns();
+	}
+	
+
+}

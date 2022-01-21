@@ -1,0 +1,33 @@
+package br.com.dio;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Cliente vic = new Cliente("Victor");
+		Conta vicCc = new	ContaCorrente(vic);
+		Conta vicCp = new ContaPoupanca(vic);
+		Conta vicCc2 = new	ContaCorrente(vic);
+		
+		Cliente adri = new Cliente("Adriana");
+		Conta adriCc = new	ContaCorrente(adri);
+		Conta adriCp = new ContaPoupanca(adri);
+		Conta adriCp2 = new	ContaPoupanca(adri);
+		
+		vicCc.depositar(100,false);
+		vicCc.imprimirExtrato();
+		vicCc.transferir(30, vicCp);
+		vicCp.transferir(10, vicCc2);	
+		vicCc.imprimirExtrato();
+		vicCp.imprimirExtrato();
+		vicCc2.imprimirExtrato();
+		
+		adriCc.imprimirExtrato();
+		adriCp.imprimirExtrato();
+		adriCp2.imprimirExtrato();
+
+		
+		System.out.println("Fim.");
+	}
+
+}

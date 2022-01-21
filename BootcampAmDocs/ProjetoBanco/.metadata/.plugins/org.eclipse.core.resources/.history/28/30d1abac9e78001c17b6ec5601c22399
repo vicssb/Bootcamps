@@ -1,0 +1,21 @@
+package br.com.dio;
+
+public class ContaPoupanca extends Conta{
+
+	public ContaPoupanca(Cliente cliente) {
+		super(cliente);
+	}
+
+	@Override
+	public void depositar(double valor, boolean trasf) {
+		super.depositar(valor, trasf);
+	}
+
+	@Override
+	public void imprimirExtrato() {
+		System.out.println("\n=== Extrato da Conta Poupanca ===");
+
+		super.imprimirInfosComuns();		
+	}
+	
+}

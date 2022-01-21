@@ -1,0 +1,13 @@
+package br.com.dio;
+
+public class Cliente {
+	
+	String nome;
+
+	public Cliente(String nome) {
+		this.nome = nome;
+		System.out.println("O cliente "+nome+" foi criado.");
+	}
+	
+
+}
