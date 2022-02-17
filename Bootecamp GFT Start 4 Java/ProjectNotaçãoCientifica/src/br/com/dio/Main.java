@@ -34,6 +34,9 @@
  * -1.0000E+100
  *
  * Prova 1 de Programação de Computadores da UNILA (2015/2)
+ *
+ *  @author Victor S. S. Barros
+ *  @version 1.0
  */
 package br.com.dio;
 
