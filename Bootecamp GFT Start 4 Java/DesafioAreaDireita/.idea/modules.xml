@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DesafioAreaDireita.iml" filepath="$PROJECT_DIR$/DesafioAreaDireita.iml" />
+      <module fileurl="file://F:/JAVA/tutorial-rest-api/tutorial-rest-api.iml" filepath="F:/JAVA/tutorial-rest-api/tutorial-rest-api.iml" />
+    </modules>
+  </component>
+</project>
